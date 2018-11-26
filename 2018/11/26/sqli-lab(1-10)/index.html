@@ -9,13 +9,38 @@
   
   <title>Star_Cheng的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
+  <meta name="description" content="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入) 构造?id=数字’后发现报错，说明存在SQL注入：    在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22      接下来猜解字段的数目，使用order by语句，使用order by">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Star_Cheng的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2018/11/26/sqli-lab(1-10)/index.html">
 <meta property="og:site_name" content="Star_Cheng的博客">
+<meta property="og:description" content="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入) 构造?id=数字’后发现报错，说明存在SQL注入：    在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22      接下来猜解字段的数目，使用order by语句，使用order by">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/558A408AB82F496BB026008000413B0D/4414">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/6CD8F28C1F6D4386857E50CB6B111082/4419">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D7E5A9D7D23149A7B5FA9E7B0352BB91/4421">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/2288E506BC7B405C92F1EC76FD5663C7/4425">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C16E0386666E4932BE1D27C2C00340EA/4420">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/070E58FF5F2E49E5B465271727982593/4422">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/204597D742A2418CA81D7AE694E19413/4426">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/954C506AA5F243E9AB42347ABF533AC2/4423">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/C0CAF574597C47318D32C1611ADE2F18/4416">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BAE7C7F8EF924262B7470B2FCB68B959/4417">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BE395A607FBA4159944DD2FC91E4E808/4415">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/1C5217B34DA84064A914D8601FE8D448/4418">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/D394D877D4C54AD1800009CDB591BEE9/4412">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/5FD5BB60E40946C6B89BEE1561F6F1B1/4411">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/77142EDB338D4E2AB4143D8D301E4AF8/4413">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/F6C6CADED45C4D949FAF84F8031C54A2/4471">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/BCFDA032C5C4409B8B9AB69D72A9B187/4473">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/4CB82ADCB48D4D3F8B868CEC8BF8302E/4481">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/DE5558657C734B848001492AB4287843/4492">
+<meta property="og:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/5FBEAEECACA143C8A03B0206CB86FF7A/6223">
+<meta property="og:updated_time" content="2018-07-30T06:03:39.194Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Star_Cheng的博客">
+<meta name="twitter:description" content="1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入) 构造?id=数字’后发现报错，说明存在SQL注入：    在单引号后面加入#的url编码后页面显示正常，写出几个常用的：空格是%20，单引号是%27，井号是%23，双引号是%22      接下来猜解字段的数目，使用order by语句，使用order by">
+<meta name="twitter:image" content="https://note.youdao.com/yws/public/resource/d16f71bd0704844f19a2e1165db52575/xmlnote/558A408AB82F496BB026008000413B0D/4414">
   
     <link rel="alternative" href="/atom.xml" title="Star_Cheng的博客" type="application/atom+xml">
   
@@ -29,9 +54,6 @@
   <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
-    
-    
-  
   
       <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
   
@@ -42,8 +64,8 @@
       var yiliaConfig = {
           fancybox: true,
           animate: true,
-          isHome: true,
-          isPost: false,
+          isHome: false,
+          isPost: true,
           isArchive: false,
           isTag: false,
           isCategory: false,
@@ -271,9 +293,7 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-sqli-lab(1-10)" class="article article-type-post" itemscope="" itemprop="blogPost">
+      <div class="body-wrap"><article id="post-sqli-lab(1-10)" class="article article-type-post" itemscope="" itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2018/11/26/sqli-lab(1-10)/" class="article-date">
@@ -502,97 +522,153 @@ else:
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2018/11/26/sqli-lab(1-10)/"></a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 Star_Cheng 的个人博客">Star_Cheng</a></p>
+        <p><span>发布时间:</span>2018年11月26日 - 16时33分</p>
+        <p><span>最后更新:</span>2018年07月30日 - 14时03分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2018/11/26/sqli-lab(1-10)/" title="">http://yoursite.com/2018/11/26/sqli-lab(1-10)/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/11/26/sqli-lab(1-10)/　　作者: Star_Cheng" title=""></span>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target="_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+  
+    <a href="/2018/11/01/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+
   
 </article>
 
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-level-1-GET-Error-based-Single-quotes-String-基于错误的GET单引号字符型注入"><span class="toc-number">1.</span> <span class="toc-text">1.level-1 GET - Error based - Single quotes - String(基于错误的GET单引号字符型注入)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-less-2-GET-Error-based-Intiger-based-基于错误的GET整型注入"><span class="toc-number">2.</span> <span class="toc-text">2.less-2 GET - Error based - Intiger based (基于错误的GET整型注入)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-less-3-GET-Error-based-Single-quotes-with-twist-string-基于错误的GET单引号变形字符型注入"><span class="toc-number">3.</span> <span class="toc-text">3.less-3 GET - Error based - Single quotes with twist string (基于错误的GET单引号变形字符型注入)</span></a></li></ol><li class="toc-item toc-level-1"><a class="toc-link" href="#coding-utf-8"><span class="toc-number"></span> <span class="toc-text">coding=utf-8</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#coding-utf-8-1"><span class="toc-number"></span> <span class="toc-text">coding=utf-8</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#less-10-GET-Blind-Time-based-double-quotes-基于时间的双引号盲注"><span class="toc-number">1.</span> <span class="toc-text">less 10 GET - Blind - Time based - double quotes (基于时间的双引号盲注)</span></a></li></ol>
+</li></div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+<input type="button" id="tocButton" value="隐藏目录" title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
 
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
 
 
 
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/11/01/hello-world/" class="article-date">
-      <time datetime="2018-11-01T13:32:22.449Z" itemprop="datePublished">2018-11-01</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy">
+        <section class="changyan" id="comments">
+  <!--<div id="uyan_frame"></div>-->
+  <div id="SOHUCS"></div>
+  <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js"></script>
+  <script type="text/javascript">
+    window.changyan.api.config({
+      appid: 'xxxx',
+      conf: 'xxxxxxxxx'
+    });
+  </script>
+</section>
     
-    
-      <header class="article-header">
+
+
+
+    <div class="scroll" id="post-nav-button">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/11/01/hello-world/">Hello World</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2018/11/01/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
     </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/11/26/sqli-lab(1-10)/">sqli-lab(1-10)</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/11/01/hello-world/">Hello World</a></li></ul>
     
-    <div class="article-info article-info-index">
-      
-      
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
 
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+    <script>
+        $(".post-list").addClass("toc-article");
+        // $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#toc, .switch-btn, .switch-area").toggle();
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+                $(".switch-btn, .switch-area").fadeToggle(300);
+            }
+        })
+    </script>
 
 
 
 
-
-
-
-
-
-
-
-  
-  
+    <script>
+        
+    </script>
 
 </div>
       <footer id="footer">
